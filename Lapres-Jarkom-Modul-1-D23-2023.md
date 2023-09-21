@@ -240,6 +240,8 @@ Kelompok D23 :
 
   ### Kendala Nomor 6
 
+  Masih belum paham maksud soal, dan tidak cukup waktu ketika ingin mengerjakan pada saat praktikum modul 1
+
 
   ## Soal Nomor 7
 
