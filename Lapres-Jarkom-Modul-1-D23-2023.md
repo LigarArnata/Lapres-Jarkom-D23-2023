@@ -15,7 +15,7 @@ Kelompok D23 :
   - [Jawaban Nomor 1](#jawaban-nomor-1)
     - [File pcap dan Filtering](#file-pcap-dan-filtering-1)
     - [Detail TCP Sequence dan Acknowledge Number](#detail-tcp-sequence-dan-acknowledge-number)
-    - [Seuquence dan Acknowledge Number Packet Response](#Seuquence-dan-Acknowledge-Number-Packet-Response)
+    - [Sequence dan Acknowledge Number Packet Response](#Sequence-dan-Acknowledge-Number-Packet-Response)
     - [Flag](#flag-1)
   - [Soal Nomor 2](#soal-nomor-2)
   - [Jawaban Nomor 2](#jawaban-nomor-2)
