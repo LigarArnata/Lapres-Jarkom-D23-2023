@@ -13,16 +13,16 @@ Kelompok D23 :
   - [Daftar Isi](#daftar-isi)
   - [Soal Nomor 1](#soal-nomor-1)
   - [Jawaban Nomor 1](#jawaban-nomor-1)
-    - [File pcap dan Filtering](#1-langkah-1)
-    - [Packet dengan Request STOR](#1-langkah-2)
-    - [Detail TCP Seuquence dan Acknowledge Number](#1-langkah-3)
-    - [Seuquence dan Acknowledge Number Packet Response](#1-langkah-4)
-    - [Flag](#1-langkah-5)
+    - [File pcap dan Filtering](#file-pcap-dan-filtering)
+    - [Packet dengan Request STOR](#packet-dengan-request-stor)
+    - [Detail TCP Seuquence dan Acknowledge Number](#Detail-TCP-Seuquence-dan-Acknowledge-Number)
+    - [Seuquence dan Acknowledge Number Packet Response](#Seuquence-dan-Acknowledge-Number-Packet-Response)
+    - [Flag](#flag-1)
   - [Soal Nomor 2](#soal-nomor-2)
   - [Jawaban Nomor 2](#jawaban-nomor-2)
-    - [File pcap dan Filtering](#2-langkah-1)
-    - [Pemilihan packet dan Server yang digunakan](#2-langkah-2)
-    - [Flag](#2-langkah-3)
+    - [File pcap dan Filtering](#file-pcap-dan-filtering)
+    - [Pemilihan packet dan Server yang digunakan](#pemilihan-packet-dan-server-yang-digunakan)
+    - [Flag](#flag-2)
   - [Soal Nomor 3](#soal-nomor-3)
   - [Jawaban Nomor 3](#jawaban-nomor-3)
     - [File pcap dan Filtering](#3-langkah-1)
@@ -69,5 +69,20 @@ Kelompok D23 :
 
   ## Jawaban Nomor 1
 
-  ### 1 Langkah 1
+  ### File pcap dan Filtering
+  ### Packet dengan Request STOR
+  ### Detail TCP Seuquence dan Acknowledge Number
+  ### Seuquence dan Acknowledge Number Packet Response
+  ### Flag-1
+
+  ## Soal Nomor 2
+
+  Sebutkan web server yang digunakan pada portal praktikum Jaringan Komputer!
+
+  ## Soal Nomor 2
+
+  ### File pcap dan Filtering
+  ### Pemilihan packet dan Server yang digunakan
+  ### Flag-2
+
 
