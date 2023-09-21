@@ -71,8 +71,7 @@ Kelompok D23 :
 
   ### File pcap dan Filtering
 
-  Buka File soal1.pcapng dan masukkan filter `ftp contains "STOR"` pada display filter. Filter tersebut hanya akan menampilkan packet dengan protocol FTP dan memiliki       
-  request perintah STOR atau yang memiliki keterangan sebagai packet yang Meng-upload file ke FTP server
+  Buka File soal1.pcapng dan masukkan filter `ftp contains "STOR"` pada display filter. Filter tersebut hanya akan menampilkan packet dengan protocol FTP dan memiliki   request perintah STOR atau yang memiliki keterangan sebagai packet yang Meng-upload file ke FTP server
 
   ![No1-1](https://cdn.discordapp.com/attachments/773324309020147732/1154289009980346438/image.png)
 
@@ -88,9 +87,7 @@ Kelompok D23 :
 
   ### Sequence dan Acknowledge Number Packet Response
 
-  Untuk melihat Sequence dan Acknowledge Number dari Packet Responsenya maka hapus `contains "STOR"` dari filter sehingga menyisakan `ftp` dan pilih packet yang tepat     
-  berada dibawah packet yang memiliki request perintah STOR tadi, kemudian dengan cara yang sama pada bagian Transmission Control Protocol lihat Sequence dan Acknowledge 
-  Number
+  Untuk melihat Sequence dan Acknowledge Number dari Packet Responsenya maka hapus `contains "STOR"` dari filter sehingga menyisakan `ftp` dan pilih packet yang tepat    berada dibawah packet yang memiliki request perintah STOR tadi, kemudian dengan cara yang sama pada bagian Transmission Control Protocol lihat Sequence dan Acknowledge Number
 
   ![No1-3](https://cdn.discordapp.com/attachments/773324309020147732/1154291658624618536/image.png)
 
