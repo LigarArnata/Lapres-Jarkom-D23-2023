@@ -224,6 +224,14 @@ Kelompok D23 :
 
   ### IP Public
 
+  ![No5-3](https://cdn.discordapp.com/attachments/773324309020147732/1154535210323562577/Screenshot_64.png)
+
+  Dari file soal5.pcapng, bisa kita ketahui bahwa seluruh paket yang ada menggunakan IPv4, dan kita juga mengetahui bahwa alamat IP pribadi biasanya ada dalam salah satu dari tiga rentang berikut ini
+  - 10.0.0.0 hingga 10.255.255.255
+  - 172.16.0.0 hingga 172.31.255.255
+  - 192.168.0.0 hingga 192.168.255.255
+  Sehingga didapatkan bahwa IP public yang ada pada file tersebut adalah **74.53.140.153**
+
 
   ### Kendala Nomor 5
 
