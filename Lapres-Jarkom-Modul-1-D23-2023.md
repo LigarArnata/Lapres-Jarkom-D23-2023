@@ -13,13 +13,13 @@ Kelompok D23 :
   - [Daftar Isi](#daftar-isi)
   - [Soal Nomor 1](#soal-nomor-1)
   - [Jawaban Nomor 1](#jawaban-nomor-1)
-    - [File pcap dan Filtering Nomor 1](#file-pcap-dan-filtering-nomor-1)
+    - [File pcap dan Filtering](#file-pcap-dan-filtering-1)
     - [Detail TCP Sequence dan Acknowledge Number](#detail-tcp-sequence-dan-acknowledge-number)
     - [Sequence dan Acknowledge Number Packet Response](#Sequence-dan-Acknowledge-Number-Packet-Response)
     - [Flag](#flag-1)
   - [Soal Nomor 2](#soal-nomor-2)
   - [Jawaban Nomor 2](#jawaban-nomor-2)
-    - [File pcap dan Filtering Nomor 2](#file-pcap-dan-filtering-nomor-2)
+    - [File pcap dan Filtering](#file-pcap-dan-filtering-2)
     - [Pemilihan packet dan Server yang digunakan](#pemilihan-packet-dan-server-yang-digunakan)
     - [Flag](#flag-2)
   - [Soal Nomor 3](#soal-nomor-3)
@@ -71,7 +71,7 @@ Kelompok D23 :
   ## Jawaban Nomor 1
 
 
-  ### File pcap dan Filtering Nomor 1
+  ### File pcap dan Filtering 1
 
   Buka File soal1.pcapng dan masukkan filter `ftp contains "STOR"` pada display filter. Filter tersebut hanya akan menampilkan packet dengan protocol FTP dan memiliki   request perintah STOR atau yang memiliki keterangan sebagai packet yang Meng-upload file ke FTP server
 
@@ -111,7 +111,7 @@ Kelompok D23 :
   ## Jawaban Nomor 2
 
 
-  ### File pcap dan Filtering Nomor 2
+  ### File pcap dan Filtering 2
 
   Buka file soal2.pcapng dan masukkan filter `ip.src == 10.21.78.111 or ip.dst == 10.21.78.111` yang mana IP didapatkan langsung dari portal praktikum Jaringan Komputer sehingga filter tersebut hanya akan menampilkan packet yang berasal dan menuju portal tersebut
 
