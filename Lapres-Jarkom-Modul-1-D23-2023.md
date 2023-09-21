@@ -14,7 +14,6 @@ Kelompok D23 :
   - [Soal Nomor 1](#soal-nomor-1)
   - [Jawaban Nomor 1](#jawaban-nomor-1)
     - [File pcap dan Filtering](#file-pcap-dan-filtering)
-    - [Packet dengan Request STOR](#packet-dengan-request-stor)
     - [Detail TCP Seuquence dan Acknowledge Number](#Detail-TCP-Seuquence-dan-Acknowledge-Number)
     - [Seuquence dan Acknowledge Number Packet Response](#Seuquence-dan-Acknowledge-Number-Packet-Response)
     - [Flag](#flag-1)
@@ -69,19 +68,40 @@ Kelompok D23 :
 
   ## Jawaban Nomor 1
 
+
   ### File pcap dan Filtering
 
-  Buka File soal1.pcapng dan masukkan filter `ftp` pada display filter
+  Buka File soal1.pcapng dan masukkan filter `ftp contains "STOR"` pada display filter. Filter tersebut hanya akan menampilkan packet dengan protocol FTP dan memiliki       
+  request perintah STOR atau yang memiliki keterangan sebagai packet yang Meng-upload file ke FTP server
 
-  ![No1-1](https://cdn.discordapp.com/attachments/773324309020147732/1154286715939332177/Screenshot_51.png)
-  
-  ### Packet dengan Request STOR
+  ![No1-1](https://cdn.discordapp.com/attachments/773324309020147732/1154289009980346438/image.png)
 
-  Carilah packet yang melakukan Request perintah STOR yang memiliki keterangan sebagai packet yang Meng-upload file ke FTP server
 
-  ### Detail TCP Seuquence dan Acknowledge Number
-  ### Seuquence dan Acknowledge Number Packet Response
+  ### Detail TCP Sequence dan Acknowledge Number
+
+  Cek pada bagian Transmission Control Protocol dari packet tersebut dan lihat Sequence dan Acknowledge Number
+
+  ![No1-2](https://cdn.discordapp.com/attachments/773324309020147732/1154290301670801408/image.png)
+
+  Ditemukan bahwa Sequence dan Acknowledge Number adalah 258040667 dan 1044861039
+
+
+  ### Sequence dan Acknowledge Number Packet Response
+
+  Untuk melihat Sequence dan Acknowledge Number dari Packet Responsenya maka hapus `contains "STOR"` dari filter sehingga menyisakan `ftp` dan pilih packet yang tepat     
+  berada dibawah packet yang memiliki request perintah STOR tadi, kemudian dengan cara yang sama pada bagian Transmission Control Protocol lihat Sequence dan Acknowledge 
+  Number
+
+  ![No1-3](https://cdn.discordapp.com/attachments/773324309020147732/1154291658624618536/image.png)
+
+  Ditemukan bahwa Sequence dan Acknowledge Number adalah 1044861039 dan 258040696
+
+
   ### Flag-1
+
+  Berikut merupakan flag yang kami dapatkan
+
+  ![No1-Flag](https://cdn.discordapp.com/attachments/773324309020147732/1154292297161244672/image.png)
 
   ## Soal Nomor 2
 
