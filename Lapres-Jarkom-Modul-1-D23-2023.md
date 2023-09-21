@@ -144,7 +144,7 @@ Kelompok D23 :
   ## Jawaban Nomor 3
 
 
-  ### File pcap dan Filtering - 3
+  ### File pcap dan Filtering 3
 
   Buka file pcap soal3.pcap dan masukkan filter `ip.src == 239.255.255.250 or ip.dst == 239.255.255.250 and udp.port == 3702`
 
@@ -290,7 +290,7 @@ Kelompok D23 :
   ## Jawaban Nomor 10
 
 
-  ### File pcap dan Filtering
+  ### File pcap dan Filtering 10
 
   Buka file soal10.pcapng dan masukkan filter `telnet`
 
