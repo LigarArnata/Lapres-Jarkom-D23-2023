@@ -71,12 +71,14 @@ Kelompok D23 :
 
   ### File pcap dan Filtering
 
-  Buka File soal1.pcapng dan masukkan filter
-  ```bash
-  ftp
-  ```
+  Buka File soal1.pcapng dan masukkan filter `ftp` pada display filter
+
+  ![No1-1](https://cdn.discordapp.com/attachments/773324309020147732/1154286715939332177/Screenshot_51.png)
   
   ### Packet dengan Request STOR
+
+  Carilah packet yang melakukan Request perintah STOR yang memiliki keterangan sebagai packet yang Meng-upload file ke FTP server
+
   ### Detail TCP Seuquence dan Acknowledge Number
   ### Seuquence dan Acknowledge Number Packet Response
   ### Flag-1
