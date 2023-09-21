@@ -230,6 +230,7 @@ Kelompok D23 :
   - 10.0.0.0 hingga 10.255.255.255
   - 172.16.0.0 hingga 172.31.255.255
   - 192.168.0.0 hingga 192.168.255.255
+  
   Sehingga didapatkan bahwa IP public yang ada pada file tersebut adalah **74.53.140.153**
 
 
