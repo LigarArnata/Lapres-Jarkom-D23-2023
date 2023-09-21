@@ -206,7 +206,7 @@ Kelompok D23 :
 
   ### File pcap
 
-  Buka file soal5.pcapng dan urutkan packet berdasarkan nomornya
+  Buka file soal5.pcapng dan urutkan packet berdasarkan nomornya secara _descending_
 
   ![No5-1](https://cdn.discordapp.com/attachments/773324309020147732/1154317337655267370/Screenshot_62.png)
 
