@@ -70,6 +70,12 @@ Kelompok D23 :
   ## Jawaban Nomor 1
 
   ### File pcap dan Filtering
+
+  Buka File soal1.pcapng dan masukkan filter
+  ```bash
+  ftp
+  ```
+  
   ### Packet dengan Request STOR
   ### Detail TCP Seuquence dan Acknowledge Number
   ### Seuquence dan Acknowledge Number Packet Response
