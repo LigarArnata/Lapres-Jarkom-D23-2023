@@ -82,7 +82,7 @@ Kelompok D23 :
 
   ![No1-2](https://cdn.discordapp.com/attachments/773324309020147732/1154290301670801408/image.png)
 
-  Ditemukan bahwa Sequence dan Acknowledge Number adalah 258040667 dan 1044861039
+  **Ditemukan bahwa Sequence dan Acknowledge Number adalah 258040667 dan 1044861039**
 
 
   ### Sequence dan Acknowledge Number Packet Response
@@ -91,7 +91,7 @@ Kelompok D23 :
 
   ![No1-3](https://cdn.discordapp.com/attachments/773324309020147732/1154291658624618536/image.png)
 
-  Ditemukan bahwa Sequence dan Acknowledge Number adalah 1044861039 dan 258040696
+  **Ditemukan bahwa Sequence dan Acknowledge Number adalah 1044861039 dan 258040696**
 
 
   ### Flag-1
@@ -107,7 +107,19 @@ Kelompok D23 :
   ## Soal Nomor 2
 
   ### File pcap dan Filtering
+
+  Buka file soal2.pcapng dan masukkan filter `ip.src == 10.21.78.111 or ip.dst == 10.21.78.111` yang mana IP didapatkan langsung dari portal praktikum Jaringan Komputer sehingga filter tersebut hanya akan menampilkan packet yang berasal dan menuju portal tersebut
+
+  ![No2-1](https://cdn.discordapp.com/attachments/773324309020147732/1154295238882512926/Screenshot_56.png)
+
+
   ### Pemilihan packet dan Server yang digunakan
+
+  Kemudian pilih salah satu packet dan lihat informasi server yang digunakan pada bagian Hypertext Transfer Protocol packet tersebut
+
+  ![No2-2](https://cdn.discordapp.com/attachments/773324309020147732/1154295447754653758/image.png)
+
+  Ditemukan bahwa web server yang digunakan pada portal praktikum Jaringan Komputer adalah **gunicorn**
   ### Flag-2
 
 
