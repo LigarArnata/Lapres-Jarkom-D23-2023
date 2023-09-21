@@ -338,7 +338,7 @@ Kelompok D23 :
 
   ![No10-3](https://cdn.discordapp.com/attachments/773324309020147732/1154309011227816006/image.png)
 
-  Ditemukan bahwa usernamnya adalah **Dhafin** dan passwordnya adalah **kesayangank0k0**
+  Ditemukan bahwa usernamnya adalah **dhafin** dan passwordnya adalah **kesayangank0k0**
 
 
   ### Kendala Nomor 10
