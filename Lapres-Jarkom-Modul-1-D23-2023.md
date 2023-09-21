@@ -34,6 +34,9 @@ Kelompok D23 :
     - [Kendala](#kendala-nomor-4)
   - [Soal Nomor 5](#soal-nomor-5)
   - [Jawaban Nomor 5](#jawaban-nomor-5)
+    - [File pcap](#file-pcap)
+    - [Filtering dan Transmission Control Protocol](#filtering-dan-transmission-control-protocol)
+    - [IP Public](#ip-public)
     - [Kendala](#kendala-nomor-5)
   - [Soal Nomor 6](#soal-nomor-6)
   - [Jawaban Nomor 6](#jawaban-nomor-6)
@@ -201,7 +204,30 @@ Kelompok D23 :
   ## Jawaban Nomor 5
 
 
+  ### File pcap
+
+  Buka file soal5.pcapng dan urutkan packet berdasarkan nomornya
+
+  ![No5-1](https://cdn.discordapp.com/attachments/773324309020147732/1154317337655267370/Screenshot_62.png)
+
+  Didapatkan bahwa jumlah packet yang tercapture adalah **60**
+
+
+  ### Filtering dan Transmission Control Protocol
+
+  Masukkan filter `smtp` dan lihat Source Port pada bagian Transmission Control Protocol sebagai port yang digunakan oleh service SMTP pada server
+
+  ![No5-2](https://cdn.discordapp.com/attachments/773324309020147732/1154318670416322560/Screenshot_63.png)
+
+  Didapatkan bahwa Source Port yang digunakan adalah port **1470**
+
+
+  ### IP Public
+
+
   ### Kendala Nomor 5
+
+  Tidak bisa memasukkan jawaban karena tidak bisa menemukan password file zip untuk nc ke servernya. 
 
 
   ## Soal Nomor 6
