@@ -48,7 +48,112 @@ Kelompok D23 :
 
 ## Soal Nomor 1
 
-Yudhistira akan digunakan sebagai DNS Master, Werkudara sebagai DNS Slave, Arjuna merupakan Load Balancer yang terdiri dari beberapa Web Server yaitu Prabakusuma, Abimanyu, dan Wisanggeni. Buatlah topologi dengan pembagian sebagai berikut. Folder topologi dapat diakses pada drive berikut
+Yudhistira akan digunakan sebagai DNS Master, Werkudara sebagai DNS Slave, Arjuna merupakan Load Balancer yang terdiri dari beberapa Web Server yaitu Prabakusuma, Abimanyu, dan Wisanggeni. Buatlah topologinya.
+
+## Jawaban Nomor 1
+
+### Setup Topologi
+
+Pada pembagian topologi, kelompok kami mendapat topologi nomor 4 sehingga susunan dari tiap node nya adalah sebagai berikut
+
+
+
+### Konfigurasi Node
+
+Setelah membuat topologi, kami melakukan editing pada network configuration dengan menggunakan `Prefix IP : 10.33` untuk setiap nodenya sesuai dengan settingan seperti dibawah 
+
+- Pandudewanata
+```
+auto eth0
+iface eth0 inet dhcp
+
+auto eth1
+iface eth1 inet static
+	address 10.33.1.1
+	netmask 255.255.255.0
+
+auto eth2
+iface eth2 inet static
+	address 10.33.2.1
+	netmask 255.255.255.0
+
+auto eth3
+iface eth3 inet static
+	address 10.33.3.1
+	netmask 255.255.255.0
+```
+  
+- Werkudara
+```
+auto eth0
+iface eth0 inet static
+	address 10.33.1.2
+	netmask 255.255.255.0
+	gateway 10.33.1.1
+```
+
+- Yudhistira
+```
+auto eth0
+iface eth0 inet static
+	address 10.33.1.3
+	netmask 255.255.255.0
+	gateway 10.33.1.1
+```
+
+- Nakula
+```
+auto eth0
+iface eth0 inet static
+	address 10.33.2.2
+	netmask 255.255.255.0
+	gateway 10.33.2.1
+```
+
+- Sadewa
+```
+auto eth0
+iface eth0 inet static
+	address 10.33.2.3
+	netmask 255.255.255.0
+	gateway 10.33.2.1
+```
+
+- Abimanyu
+```
+auto eth0
+iface eth0 inet static
+	address 10.33.3.2
+	netmask 255.255.255.0
+	gateway 10.33.3.1
+```
+
+- Prabukusuma
+```
+auto eth0
+iface eth0 inet static
+	address 10.33.3.3
+	netmask 255.255.255.0
+	gateway 10.33.3.1
+```
+
+- Wisanggeni
+```
+auto eth0
+iface eth0 inet static
+	address 10.33.3.4
+	netmask 255.255.255.0
+	gateway 10.33.3.1
+```
+
+- Arjuna
+```
+auto eth0
+iface eth0 inet static
+	address 10.33.3.5
+	netmask 255.255.255.0
+	gateway 10.33.3.1
+```
 
 
 
