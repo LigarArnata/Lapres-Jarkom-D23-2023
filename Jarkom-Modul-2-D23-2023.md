@@ -43,7 +43,13 @@ Kelompok D23 :
     - [Penambahan Konfigurasi DNS Slave](#penambahan-konfigurasi-dns-slave-7)
   - [Soal Nomor 8](#soal-nomor-8)
   - [Jawaban Nomor 8](#jawaban-nomor-8)
-    - [Penambahan Konfigurasi DNS Slave](#penambahan-konfigurasi-dns-slave-8)
+    - [Penambahan Konfigurasi DNS Slave](#penambahan-konfigurasi-dns-slave-8) 
+  - [Soal Nomor 9](#soal-nomor-9)
+  - [Soal Nomor 10](#soal-nomor-10)
+  - [Soal Nomor 11](#soal-nomor-11)
+    
+ 
+ 
 
 
 ## Soal Nomor 1
@@ -438,6 +444,17 @@ Untuk membuat subdomain baru, kami langsung menambahkan konfigurasi pada file ba
 
 Setelah menambahkan konfigurasi tersebut, kami merestart ulang bind9 nya `service bind9 restart`
 
+## Jawaban Nomor 9
+
+### Instalasi NGINX di Abimanyu, Prabakusuma, dan Wisanggeni.
+
+## Jawaban Nomor 10
+
+### 
+
+## Jawaban Nomor 11
+
+### 
 
 
 
