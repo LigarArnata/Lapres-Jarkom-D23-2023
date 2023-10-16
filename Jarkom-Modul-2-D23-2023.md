@@ -444,13 +444,105 @@ Untuk membuat subdomain baru, kami langsung menambahkan konfigurasi pada file ba
 
 Setelah menambahkan konfigurasi tersebut, kami merestart ulang bind9 nya `service bind9 restart`
 
+## Soal Nomor 9
+
+Arjuna merupakan suatu Load Balancer Nginx dengan tiga worker (yang juga menggunakan nginx sebagai webserver) yaitu Prabakusuma, Abimanyu, dan Wisanggeni. Lakukan deployment pada masing-masing worker.
+
 ## Jawaban Nomor 9
 
 ### Instalasi NGINX di Abimanyu, Prabakusuma, dan Wisanggeni.
+```bash
+echo nameserver 192.168.122.1 > /etc/resolv.conf
+apt-get update 
+apt-get install nginx php php-fpm -y
+wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=17tAM_XDKYWDvF-JJix1x7txvTBEax7vX' -O arjuna.zip
+apt-get install unzip
+unzip arjuna.zip
+mkdir /var/www/arjuna
+cp arjuna.yyy.com/index.php /var/www/arjuna/index.php
+```
+script ini dijalankan pada Abimanyu, Prabakusuma dan juga wisanggeni. </br>
+kemudian kita cek manual di luar script versi dari php yang terinstall </br>
+```php -v```</br>
+
+![Screenshot_194](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/22819c9b-58a4-4cf7-958a-01981a62e4f1)
+
+kemudian pada file berikut ```/etc/nginx/sites-available/arjuna``` diisi dengan konfigurasi sebagai berikut
+```
+server {
+
+ 	listen 800X; #X diganti 1/2/3 sesuai prabakusuma,abimanyu dan wisanggeni
+
+ 	root /var/www/arjuna;
+
+ 	index index.php index.html index.htm;
+ 	server_name 10.33.3.X; #X diganti dengan nomor akhir 2/3/4 abi/praba/wis
+
+ 	location / {
+ 			try_files $uri $uri/ /index.php?$query_string;
+ 	}
+
+ 	# pass PHP scripts to FastCGI server
+ 	location ~ \.php$ {
+ 	include snippets/fastcgi-php.conf;
+ 	fastcgi_pass unix:/var/run/php/php7.0-fpm.sock; #disesuaikan dengan versi php yang diterima
+ 	}
+
+ location ~ /\.ht {
+ 			deny all;
+ 	}
+
+ 	error_log /var/log/nginx/arjuna_error.log;
+ 	access_log /var/log/nginx/arjuna_access.log;
+ }
+
+```
+kemudian lakukan linking agar bisa diakses dan restart nginx </br>
+```bash
+ln -s /etc/nginx/sites-available/arjuna /etc/nginx/sites-enabled
+service nginx restart
+nginx -t
+```
+
+## Soal Nomor 10
+
+Kemudian gunakan algoritma Round Robin untuk Load Balancer pada Arjuna. Gunakan server_name pada soal nomor 1. Untuk melakukan pengecekan akses alamat web tersebut kemudian pastikan worker yang digunakan untuk menangani permintaan akan berganti ganti secara acak. Untuk webserver di masing-masing worker wajib berjalan di port 8001-8003. Contoh
+    - Prabakusuma:8001
+    - Abimanyu:8002
+    - Wisanggeni:8003
 
 ## Jawaban Nomor 10
 
-### 
+### Setup LB-Arjuna
+Pada LB-Arjuna, buat file yang mengatur jalurnya load balancer untuk setiap worker
+```
+nano /etc/nginx/sites-available/lb-arjuna
+```
+dengan isi 
+```
+Upstream myweb {
+		Server 10.33.3.2; #abimanyu
+		Server 10.33.3.3; #prabakusuma
+		Server 10.33.3.4; #wisanggeni
+	}
+	
+	Server {
+		Listen 8001;
+		Listen 8002;
+		Listen 8003;
+Server_name arjuna.D23.com;
+		
+		location/ {
+		Proxy_pass http://myweb;
+		}
+}
+
+```
+kemudian lakukan linking untuk mengaktifasi sites nya
+```
+ln -s /etc/nginx/sites-available/lb-arjuna /etc/nginx/sites-enabled
+```
+
 
 ## Jawaban Nomor 11
 
