@@ -202,7 +202,7 @@ up echo nameserver 192.168.122.1 > /etc/resolv.conf
 
 Karena tiap node nantinya akan memiliki fungsi yang berbeda, maka pada tiap node tersebut harus menjalankan beberapa comman yang sesuai pada script berikut ini
 
-**- Node Aura (DHCP Relay)**
+- **Node Aura (DHCP Relay)**
 ```
 cat /etc/resolv.conf
 echo nameserver 192.168.122.1 > /etc/resolv.conf
@@ -222,13 +222,13 @@ net.ipv4.ip_forward=1
 ```
 Kemudian Restart Service `service isc-dhcp-relay restart`
 
-**- Node Himmel (DHCP Server)**
+- **Node Himmel (DHCP Server)**
 ```
 apt-get update
 apt-get install isc-dhcp-server
 ```
 
-**- Node Heiter (DNS Server)**
+- **Node Heiter (DNS Server)**
 ```
 apt-get update
 apt-get install bind9 -y
@@ -314,14 +314,14 @@ $TTL    604800
 ```
 Terakhir, lakukan restart pada DNS Servernya `Service bind9 restart`
 
-**- Node Denken (Database Server)**
+- **Node Denken (Database Server)**
 ```
 apt-get update
 apt-get install bind9 -y
 apt-get install mariadb-server -y
 ```
 
-**- Node Eisen (Load Balancer)**
+- **Node Eisen (Load Balancer)**
 ```
 apt-get update
 apt-get install nginx -y
@@ -334,7 +334,7 @@ cp def /etc/nginx/sites-available/default
 apt-get install php php-fpm
 ```
 
-**- Node Frieren, Flame, Fern (Laravel Worker)**
+- **Node Frieren, Flame, Fern (Laravel Worker)**
 ```
 apt-get update
 apt-get install mariadb-server -y
@@ -356,7 +356,7 @@ cd laravel-praktikum-jarkom
 composer install
 ```
 
-**- Node Lawine, Linie, Lugner (PHP Worker)**
+- **Node Lawine, Linie, Lugner (PHP Worker)**
 ```
 apt-get update
 apt-get install nginx -y
@@ -369,7 +369,7 @@ cp def /etc/nginx/sites-available/default
 apt-get install php php-fpm -y
 ```
 
-**- Node Revolter, Ritcher, Sein, Stark (Client)**
+- **Node Revolter, Ritcher, Sein, Stark (Client)**
 ```
 apt-get update
 apt install lynx -y
