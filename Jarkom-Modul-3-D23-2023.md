@@ -200,7 +200,7 @@ up echo nameserver 192.168.122.1 > /etc/resolv.conf
 
 ### Script Penyesuaian Fungsi Node
 
-Karena tiap node nantinya akan memiliki fungsi yang berbeda, maka pada tiap node tersebut harus menjalankan beberapa comman yang sesuai pada script berikut ini
+Karena tiap node nantinya akan memiliki fungsi yang berbeda, maka pada tiap node tersebut harus menjalankan beberapa command yang sesuai pada script berikut ini
 
 - **Node Aura (DHCP Relay)**
 ```
