@@ -43,7 +43,7 @@ Lakukan Konfigurasi sesuai dengan peta yang diberikan
 
 Setelah membuat topologi yang sesuai, kami melakukan editing pada network configuration dengan menggunakan `Prefix IP : 10.33` untuk setiap nodenya sesuai dengan settingan seperti berikut
 
-- Node Aura (DHCP Relay)
+- **Node Aura (DHCP Relay)**
 ```
 auto eth0
 iface eth0 inet dhcp
@@ -70,7 +70,7 @@ iface eth4 inet static
 		netmask 255.255.255.0
 ```
 
-- Node Denken (DB dan Laravel)
+- **Node Denken (DB dan Laravel)**
 ```
 auto eth0
 iface eth0 inet static
@@ -80,7 +80,7 @@ iface eth0 inet static
 	up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
 
-- Node Eisen (Load Balancer)
+- **Node Eisen (Load Balancer)**
 ```
 auto eth0
 iface eth0 inet static
@@ -90,7 +90,7 @@ iface eth0 inet static
 	up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
 
-- Node Frieren (Laravel Worker)
+- **Node Frieren (Laravel Worker)**
 ```
 auto eth0
 iface eth0 inet static
@@ -100,7 +100,7 @@ iface eth0 inet static
 	up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
 
-- Node Flame (Laravel Worker)
+- **Node Flame (Laravel Worker)**
 ```
 auto eth0
 iface eth0 inet static
@@ -110,7 +110,7 @@ iface eth0 inet static
 	up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
 
-- Node Fern (Laravel Worker)
+- **Node Fern (Laravel Worker)**
 ```
 auto eth0
 iface eth0 inet static
@@ -120,7 +120,7 @@ iface eth0 inet static
 	up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
 
-- Node Himmel (DHCP Server)
+- **Node Himmel (DHCP Server)**
 ```
 auto eth0
 iface eth0 inet static
@@ -130,7 +130,7 @@ iface eth0 inet static
   	up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
 
-- Node Heiter (DNS Server)
+- **Node Heiter (DNS Server)**
 ```
 auto eth0
 iface eth0 inet static
@@ -140,7 +140,7 @@ iface eth0 inet static
 	up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
 
-- Node Lawine (PHP Worker)
+- **Node Lawine (PHP Worker)**
 ```
 auto eth0
 iface eth0 inet static
@@ -150,7 +150,7 @@ iface eth0 inet static
   	up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
 
-- Node Linnie (PHP Worker)
+- **Node Linnie (PHP Worker)**
 ```
 auto eth0
 iface eth0 inet static
@@ -160,7 +160,7 @@ iface eth0 inet static
   	up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
 
-- Node Lugner (PHP Worker)
+- **Node Lugner (PHP Worker)**
 ```
 auto eth0
 iface eth0 inet static
@@ -170,28 +170,28 @@ iface eth0 inet static
   	up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
 
-- Node Revolte (Client)
+- **Node Revolte (Client)**
 ```
 auto eth0
 iface eth0 inet dhcp
 up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
 
-- Node Ritcher (Client)
+- **Node Ritcher (Client)**
 ```
 auto eth0
 iface eth0 inet dhcp
 up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
 
-- Node Sein (Client)
+- **Node Sein (Client)**
 ```
 auto eth0
 iface eth0 inet dhcp
 up echo nameserver 192.168.122.1 > /etc/resolv.conf
 ```
 
-- Node Stark (Client)
+- **Node Stark (Client)**
 ```
 auto eth0
 iface eth0 inet dhcp
