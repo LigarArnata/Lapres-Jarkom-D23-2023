@@ -27,6 +27,8 @@ Kelompok D23 :
   - [Soal Nomor 5](#soal-nomor-5)
   - [Jawaban Nomor 5](#jawaban-nomor-5)
     - [Script Update Lease Time](#script-update-lease-time)
+  - [Soal Nomor 6](#soal-nomor-6)
+    - [Konfigurasi Nginx](#konfigurasi-nginx)
 
 
 ## Topologi
@@ -203,7 +205,7 @@ up echo nameserver 192.168.122.1 > /etc/resolv.conf
 Karena tiap node nantinya akan memiliki fungsi yang berbeda, maka pada tiap node tersebut harus menjalankan beberapa command yang sesuai pada script berikut ini
 
 - **Node Aura (DHCP Relay)**
-```
+```sh
 cat /etc/resolv.conf
 echo nameserver 192.168.122.1 > /etc/resolv.conf
 apt-get update 
@@ -211,30 +213,30 @@ apt-get install isc-dhcp-relay -y
 service isc-dhcp-relay start
 ```
 Kemudian lakukan konfigurasi pada `/etc/default/isc-dhcp-relay` sebagai berikut
-```
+```sh
 SERVERS="10.33.1.2" 
 INTERFACES="eth1 eth2 eth3 eth4" 
 OPTIONS=
 ```
 Setelah itu lakukan konfigurasi untuk IP Forwarding pada `/etc/sysctl.conf` sebagai berikut
-```
+```sh
 net.ipv4.ip_forward=1
 ```
 Kemudian Restart Service `service isc-dhcp-relay restart`
 
 - **Node Himmel (DHCP Server)**
-```
+```sh
 apt-get update
 apt-get install isc-dhcp-server
 ```
 
 - **Node Heiter (DNS Server)**
-```
+```sh
 apt-get update
 apt-get install bind9 -y
 ```
 Kemudian buat file config baru pada `nano /etc/bind/named.conf.local` sebagai berikut
-```
+```sh
 zone “granz.channel.d23.com” {
 	type master;
 	file “/etc/bind/modul-3/granz.channel.d23.com”;
@@ -249,13 +251,13 @@ type master;
 };
 ```
 Setelah itu copy file dengan `cp named.local.txt /etc/bind/named.conf.local`, dan buat direktori baru yang diisi konfigurasi domain web yang akan digunakan
-```
+```sh
 mkdir /etc/bind/modul-3
 cp /etc/bind/db.local /etc/bind/modul-3/granz.channel.d23.com
 cp /etc/bind/db.local /etc/bind/modul-3/riegel.canyon.d23.com
 ```
 Lakukan konfigurasi untuk domain granz.channel.d23.com `nano /etc/bind/modul-3/granz.channel.d23.com` sebagai berikut
-```
+```sh
 ;
 ; BIND data file for local loopback interface
 ;
@@ -275,7 +277,7 @@ linie           IN      A       10.33.3.5 ; IP Linie
 lugner         	IN      A       10.33.3.6 ; IP Lugner
 ```
 Kemudian konfigurasi untuk domain `nano /etc/bind/modul-3/riegel.canyon.d23.com` sebagai berikut
-```
+```sh
 ;
 ; BIND data file for local loopback interface
 ;
@@ -292,12 +294,12 @@ $TTL    604800
 www             IN      CNAME   riegel.canyon.d23.com
 ```
 Setelah itu tambahkan juga beberapa file config baru untuk reverse domainnya dengan script dan config sebagai berikut
-```
+```sh
 cp bind.txt /etc/bind/modul-3/granz.channel.d23.com
 cp bind2.txt /etc/bind/modul-3/riegel.canyon.d23.com
 nano /etc/bind/modul-3/1.33.10.in-addr.arpa
 ```
-```
+```sh
 ;
 ; BIND data file for local loopback interface
 ;
@@ -315,14 +317,14 @@ $TTL    604800
 Terakhir, lakukan restart pada DNS Servernya `Service bind9 restart`
 
 - **Node Denken (Database Server)**
-```
+```sh
 apt-get update
 apt-get install bind9 -y
 apt-get install mariadb-server -y
 ```
 
 - **Node Eisen (Load Balancer)**
-```
+```sh
 apt-get update
 apt-get install nginx -y
 apt-get install wget -y
@@ -335,7 +337,7 @@ apt-get install php php-fpm
 ```
 
 - **Node Frieren, Flame, Fern (Laravel Worker)**
-```
+```sh
 apt-get update
 apt-get install mariadb-server -y
 apt-get install -y lsb-release ca-certificates apt-transport-https software-properties-common gnupg2
@@ -357,7 +359,7 @@ composer install
 ```
 
 - **Node Lawine, Linie, Lugner (PHP Worker)**
-```
+```sh
 apt-get update
 apt-get install nginx -y
 apt-get install wget -y
@@ -370,7 +372,7 @@ apt-get install php php-fpm -y
 ```
 
 - **Node Revolter, Ritcher, Sein, Stark (Client)**
-```
+```sh
 apt-get update
 apt install lynx -y
 apt install htop -y
@@ -380,7 +382,7 @@ apt-get install jq -y
 
 ## Soal Nomor 2
 
-Client yang melalui Switch3 mendapatkan range IP dari [prefix IP].3.16 - [prefix IP].3.32 dan [prefix IP].3.64 - [prefix IP].3.80
+>Client yang melalui Switch3 mendapatkan range IP dari [prefix IP].3.16 - [prefix IP].3.32 dan [prefix IP].3.64 - [prefix IP].3.80
 
 ## Jawaban Nomor 2
 
@@ -399,7 +401,7 @@ subnet 10.33.3.0 netmask 255.255.255.0 {
 
 ## Soal Nomor 3
 
-Client yang melalui Switch4 mendapatkan range IP dari [prefix IP].4.12 - [prefix IP].4.20 dan [prefix IP].4.160 - [prefix IP].4.168
+>Client yang melalui Switch4 mendapatkan range IP dari [prefix IP].4.12 - [prefix IP].4.20 dan [prefix IP].4.160 - [prefix IP].4.168
 
 ## Jawaban Nomor 3
 
@@ -424,7 +426,7 @@ subnet 10.33.4.0 netmask 255.255.255.0 {
 
 ## Soal Nomor 4
 
-Client mendapatkan DNS dari Heiter dan dapat terhubung dengan internet melalui DNS tersebut
+>Client mendapatkan DNS dari Heiter dan dapat terhubung dengan internet melalui DNS tersebut
 
 ## Jawaban Nomor 4
 
@@ -453,7 +455,7 @@ subnet 10.33.4.0 netmask 255.255.255.0 {
 
 ## Soal Nomor 5
 
-Lama waktu DHCP server meminjamkan alamat IP kepada Client yang melalui Switch3 selama 3 menit sedangkan pada client yang melalui Switch4 selama 12 menit. Dengan waktu maksimal dialokasikan untuk peminjaman alamat IP selama 96 menit
+>Lama waktu DHCP server meminjamkan alamat IP kepada Client yang melalui Switch3 selama 3 menit sedangkan pada client yang melalui Switch4 selama 12 menit. Dengan waktu maksimal dialokasikan untuk peminjaman alamat IP selama 96 menit
 
 ## Jawaban Nomor 5
 
@@ -483,6 +485,45 @@ subnet 10.33.4.0 netmask 255.255.255.0 {
 	max-lease-time 5760;
 }
 ```
+
+## Soal Nomor 6
+
+>Pada masing-masing worker PHP, lakukan konfigurasi virtual host untuk website berikut dengan menggunakan php 7.3.
+
+## Jawaban Nomor 6
+
+### Konfigurasi Nginx
+
+Karena pada konfigurasi node telah dilakukan downloading dan unzip file website yang diperlukan, langkah selanjutnya adalah melakukan konfigurasi `Nginx` pada PHP Workernya
+
+```sh
+server {
+
+ 	listen 80;
+
+ 	root /var/www/granz.channel.D23.com;
+
+ 	index index.php index.html index.htm;
+ 	server_name _;
+
+ 	location / {
+		try_files $uri $uri/ /index.php?$query_string;
+ 	}
+
+ 	# pass PHP scripts to FastCGI server
+ 	location ~ \.php$ {
+ 	include snippets/fastcgi-php.conf;
+ 	fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+ 	}
+```
+
+Lalu simpan dan buat symlinknya
+```
+ln -s /etc/nginx/sites-available/granz.channel.D23.com /etc/nginx/sites-enabled
+```
+
+Kemudia restart Nnginx ` service nginx restart`
+
 
 
 
