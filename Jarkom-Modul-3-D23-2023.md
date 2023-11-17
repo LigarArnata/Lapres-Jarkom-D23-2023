@@ -35,7 +35,7 @@ Kelompok D23 :
 
 ## Soal Nomor 1
 
-Lakukan Konfigurasi sesuai dengan peta yang diberikan
+>Lakukan Konfigurasi sesuai dengan peta yang diberikan
 
 ## Jawaban Nomor 1
 
