@@ -246,7 +246,7 @@ zone “riegel.canyon.d23.com”{
 	file “/etc/bind/modul-3/riegel.canyon.d23.com”;
 };
 zone “1.33.10.in-addr.arpa” {
-type master;
+	type master;
 	file “/etc/bind/modul-3/1.33.10.in-addr.arpa”;
 };
 ```
