@@ -69,7 +69,7 @@ iface eth3 inet static
 auto eth4
 iface eth4 inet static
 	address 10.33.4.1
-		netmask 255.255.255.0
+	netmask 255.255.255.0
 ```
 
 - **Node Denken (DB dan Laravel)**
