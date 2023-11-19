@@ -29,6 +29,7 @@ Kelompok D23 :
     - [Script Update Lease Time](#script-update-lease-time)
   - [Soal Nomor 6](#soal-nomor-6)
     - [Konfigurasi Nginx](#konfigurasi-nginx)
+  - [Hasil dan Kendala](#hasil-dan-kendala)
 
 
 ## Topologi
@@ -525,14 +526,19 @@ ln -s /etc/nginx/sites-available/granz.channel.D23.com /etc/nginx/sites-enabled
 Kemudian restart Nnginx ` service nginx restart`
 
 
-##Hasil dan Kendala
+## Hasil dan Kendala
 
 Selamma Pengerjaan praktikum kelompok kami menemui beberapa kendala. Kendala ini mungkin bersifat local, atau sulit untuk direplikasikan. Untuk penyelesaian atau pemecahan dari kendala tersebut, jika ada, akan dimasukan ke readme ini di lain waktu.
 
-- 
+#### Pada Laravel Worker setelah melakukan penginstalan php dan composer muncul pesan berikut
+
 ![Screenshot_254](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/d02b9199-f710-402c-bd3d-4b8a337f8a03)
 
+#### DHCP server tidak bisa jalan
+
 ![Screenshot_256](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/313ecee1-0616-4281-bacc-5c3f9eea7471)
+
+#### DNS server tidak bisa jalan, terdapat eror pada file named.conf.local, tapi eror ini seharusnya tidak terjadi karena penyebabnya tidak pernah ada
 
 ![Screenshot_253](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/645b590c-2552-49a7-9099-4004ea488ad4)
 
