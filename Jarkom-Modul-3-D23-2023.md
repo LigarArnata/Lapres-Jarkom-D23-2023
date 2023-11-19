@@ -536,11 +536,12 @@ Selamma Pengerjaan praktikum kelompok kami menemui beberapa kendala. Kendala ini
 
 #### DHCP server tidak bisa jalan
 
-![Screenshot_256](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/313ecee1-0616-4281-bacc-5c3f9eea7471)
+![Screenshot_253](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/645b590c-2552-49a7-9099-4004ea488ad4)
 
 #### DNS server tidak bisa jalan, terdapat eror pada file named.conf.local, tapi eror ini seharusnya tidak terjadi karena penyebabnya tidak pernah ada
 
-![Screenshot_253](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/645b590c-2552-49a7-9099-4004ea488ad4)
+![Screenshot_256](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/313ecee1-0616-4281-bacc-5c3f9eea7471)
+
 
 
 
