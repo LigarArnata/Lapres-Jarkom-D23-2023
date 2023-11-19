@@ -522,14 +522,19 @@ Lalu simpan dan buat symlinknya
 ln -s /etc/nginx/sites-available/granz.channel.D23.com /etc/nginx/sites-enabled
 ```
 
-Kemudia restart Nnginx ` service nginx restart`
+Kemudian restart Nnginx ` service nginx restart`
 
 
+##Hasil dan Kendala
 
+Selamma Pengerjaan praktikum kelompok kami menemui beberapa kendala. Kendala ini mungkin bersifat local, atau sulit untuk direplikasikan. Untuk penyelesaian atau pemecahan dari kendala tersebut, jika ada, akan dimasukan ke readme ini di lain waktu.
 
+- 
+![Screenshot_254](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/d02b9199-f710-402c-bd3d-4b8a337f8a03)
 
+![Screenshot_256](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/313ecee1-0616-4281-bacc-5c3f9eea7471)
 
-
+![Screenshot_253](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/645b590c-2552-49a7-9099-4004ea488ad4)
 
 
 
