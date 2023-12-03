@@ -1,4 +1,4 @@
-![image](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/95403456/107f0c86-fdfc-42f3-86de-6d59c758605e)# Laporan Resmi Praktikum Jarkom Modul 4
+# Laporan Resmi Praktikum Jarkom Modul 4
 
 ![Lambang ITS](https://www.its.ac.id/wp-content/uploads/2020/07/Lambang-ITS-2-320x320.png)
 
