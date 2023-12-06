@@ -18,6 +18,10 @@ Kelompok D23 :
     - [Pengelompokkan Subnet](#pengelompokkan-subnet)
     - [Pembagian IP](#pembagian-ip)
     - [Routing](#routing)
+  - [CIDR](#cidr)
+    - [Penggabungan](#penggabungan)
+    - [Prefix IP dan Pembagian IP](#prefix-ip-dan-pembagian-ip)
+    - [Topologi dan Routing di GNS3](#topologi-dan-routing-di-gns-3)
 
 ## Topologi
 
@@ -63,14 +67,38 @@ Langkah terakhir adalah melakukan routing pada tiap subnet sehingga tiap tiap su
 
 Gambar diatas merupakan beberapa hasil routing yang sudah berhasil, dimana dapat dilakukan komunikasi antara `LaubHills - LakeKorridor (subnet 1 - subnet 7)`, `WileRegion - TurkRegion (subnet 10 - subnet 14)`, dan `RohrRoad - GrabeForest (subnet 3 - subnet 15)`.
 
+## CIDR
+
+Dalam Teknik CIDR, alias _Classless Inter Domain Routing_, Subnet-subnet kecil yang berdekatan diagabung menjadi subnet yang lebih besar. Dengan secara teori penggabungannya menaikkan subnet sebanyak yang terkecil-1, diantara dua subnet yang digabung. Dari penggabungan yang saya lakukan, didapat 8 kali penggabungan dan subnet terbesar adalah /14, tapi karena di bagian terluar masih bisa di akomodasi oleh /15, maka di pembagian ip address paling luar adalah /15.
+
+### Penggabungan
+
+![Screenshot_263](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/fda073cd-6e52-44e1-9740-12faf4867906)
+
+![Screenshot_264](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/24d8f7d2-1298-4415-91e7-e6e9229aafca)
+
+![Screenshot_265](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/a7ca6e0d-b69d-40a5-9cab-927b64688977)
+
+![Screenshot_266](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/d53eb20c-707c-4663-a662-a30754e60436)
+
+untuk visualisasi cakupan tiap subnet dan penggabungannya kami menggambar secara fisik tree dari CIDR tersebut. </br>
+![CIDR_TREE](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/a5652258-4587-4014-98ac-277ebfcee3c6)
 
 
+### Prefix IP dan Pembagian IP
 
+Karena netmask terluar/terbesarnya adalah /15. maka secara tidak langsung, Prefix IP kami berubah di bagian luar. sehingga ada node yang ber prefix 10.32., dan untuk node lain tetap menggunakan 10.33 sebagaimana yang sudah dibagikan ke kelompok kami.
 
+![Screenshot_267](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/dead14f6-af05-4852-b640-73d508ba7768)
 
+![Screenshot_268](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/a11faef9-6ab9-4101-be24-62681de1da04)
 
+### Topologi dan Routing di GNS 3
 
-    
+Untuk Topologi pada GNS3 ini tidak jauh berbeda, hanya saja untuk tiap antarrouter perlu diberi Switch, agar dua router tersebut dapat berkomunikasi. </br>
+![Screenshot_261](https://github.com/LigarArnata/Lapres-Jarkom-D23-2023/assets/89778375/0ed7f4ea-ee3e-4eb3-b095-310d9138f9e1)
+
+untuk routing dan configurasi pada tiap nodenya belum di lakukan.
 
 
 
