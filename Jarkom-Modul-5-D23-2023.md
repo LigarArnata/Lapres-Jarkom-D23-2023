@@ -225,5 +225,50 @@ gateway 10.33.4.1
 auto eth0
 iface eth0 inet dhcp
 ```
+
+## Routing
+
+Setelah melakukan konfigurasi dan subnetting pada setiap node, selanjutnya adalah melakukan routing seperti berikut
+
+**Aura**
+```
+#Heiter
+up route add -net 10.33.1.0 netmask 255.255.252.0 gw 10.33.13.134
+up route add -net 10.33.4.0 netmask 255.255.252.0 gw 10.33.13.134
+
+#Frieren
+up route add -net 10.33.10.0 netmask 255.255.255.0 gw 10.33.13.138
+up route add -net 10.33.13.140 netmask 255.255.255.252 gw 10.33.13.138
+up route add -net 10.33.8.0 netmask 255.255.254.0 gw 10.33.13.138
+up route add -net 10.33.13.0 netmask 255.255.255.128 gw 10.33.13.138
+up route add -net 10.33.11.0 netmask 255.255.255.252 gw 10.33.13.138
+up route add -net 10.33.12.0 netmask 255.255.255.252 gw 10.33.13.138
+```
+
+**Heiter**
+```
+up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.33.13.133
+```
+
+**Frieren**
+```
+up route add -net 10.33.8.0 netmask 255.255.254.0 gw 10.33.13.142
+up route add -net 10.33.13.0 netmask 255.255.255.128 gw 10.33.13.142
+up route add -net 10.33.11.0 netmask 255.255.255.252 gw 10.33.13.142
+up route add -net 10.33.12.0 netmask 255.255.255.252 gw 10.33.13.142
+up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.33.13.137
+```
+
+**Himmel**
+```
+up route add -net 10.33.11.0 netmask 255.255.255.252 gw 10.33.13.2
+up route add -net 10.33.12.0 netmask 255.255.255.252 gw 10.33.13.2
+up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.33.13.141
+```
+
+**Fern**
+```
+up route add -net 0.0.0.0 netmask 0.0.0.0 gw 10.33.13.1
+```
  
     
